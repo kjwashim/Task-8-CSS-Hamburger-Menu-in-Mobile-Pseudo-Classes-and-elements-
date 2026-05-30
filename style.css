@@ -1,0 +1,161 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    position: relative;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.menu a {
+    text-decoration: none;
+    margin: 0 15px;
+    color: black;
+}
+
+.user {
+    background-color: #d9eefc;
+    padding: 8px 15px;
+    border-radius: 8px;
+}
+
+/* Hamburger Button */
+.hamburger-btn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+    position: relative;
+}
+
+/* Mobile Menu */
+.mobile-menu {
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    width: 200px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.mobile-menu a {
+    display: block;
+    padding: 12px;
+    text-decoration: none;
+    color: black;
+    border-bottom: 1px solid #eee;
+}
+
+/* Show menu on focus */
+.hamburger-btn:focus .mobile-menu {
+    display: block;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 5%;
+}
+
+.left {
+    width: 50%;
+}
+
+.left h1 {
+    font-size: 48px;
+    line-height: 1.3;
+}
+
+.left span {
+    color: #2196f3;
+}
+
+.left p {
+    margin: 20px 0;
+    color: gray;
+}
+
+.left button {
+    background-color: #2196f3;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.right {
+    width: 45%;
+}
+
+.right img {
+    width: 100%;
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+    .logo,
+    .user,
+    .menu a {
+        font-size: 14px;
+    }
+
+    .left h1 {
+        font-size: 36px;
+    }
+
+    .right img {
+        width: 90%;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+
+    .menu {
+        display: none;
+    }
+
+    .hamburger-btn {
+        display: block;
+    }
+
+    .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .left,
+    .right {
+        width: 100%;
+    }
+
+    .left h1 {
+        font-size: 30px;
+    }
+
+    .right img {
+        width: 70%;
+        margin-bottom: 20px;
+    }
+}
